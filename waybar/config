@@ -54,13 +54,13 @@
     "custom/playback": {
         "format": "♪ {}%",
         "exec": "playerctl volume | awk '{print int($1 * 100)}'",
-	    "exec-on-event": true,
+        "exec-on-event": true,
         "interval": 10,
-	    "on-click": "playerctl play-pause",
+        "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl volume 0.1+",
         "on-scroll-down": "playerctl volume 0.1-",
-    	"scroll-step": 5,
-    	"tooltip": false
+        "scroll-step": 5,
+        "tooltip": false
     },
 
     "cpu": {
@@ -73,14 +73,14 @@
         "interval": 30,
         "format": " {used:0.1f}GB",
         "max-length": 10,
-    	"tooltip": true,
-    	"tooltip-format": "{used:0.1f} of {total:0.1f} GB"
+        "tooltip": true,
+        "tooltip-format": "{used:0.1f} of {total:0.1f} GB"
     },
 
     "temperature": {
         "thermal-zone": 6,
         "format": " {temperatureC}°C",
-	    "tooltip": false
+        "tooltip": false
     },
 
     "network": {
@@ -91,7 +91,7 @@
 
     "custom/lock": {
         "format": "",
-        "on-click": "swayidle -w timeout 1 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'",
-	    "tooltip": false
+        "on-click": "swayidle -w timeout 1 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' &",
+        "tooltip": false
     }
 }
