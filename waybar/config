@@ -1,0 +1,97 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 36,
+    "margin-right": 0,
+    "margin-left": 0,
+
+    "modules-left": [
+        "clock",
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "custom/playback",
+        "cpu",
+        "memory",
+        "temperature",
+        "network",
+        "custom/lock"
+    ],
+
+    "clock": {
+        "timezone": "Europe/Oslo",
+        "format": " {:%H:%M}",
+        "tooltip": true,
+        "tooltip-format": " {:%Y-%m-%d}"
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "all-outputs": true,
+        "tooltip-format": "{name}: {title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "disable-scroll": true,
+        "all-outputs": true,
+        "show-special": true,
+        "persistent-workspaces": {
+            "*": [ 1, 2, 3 ]
+        }
+    },
+
+    "custom/playback": {
+        "format": "♪ {}%",
+        "exec": "playerctl volume | awk '{print int($1 * 100)}'",
+	    "exec-on-event": true,
+        "interval": 10,
+	    "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl volume 0.1+",
+        "on-scroll-down": "playerctl volume 0.1-",
+    	"scroll-step": 5,
+    	"tooltip": false
+    },
+
+    "cpu": {
+        "interval": 10,
+        "max-length": 10,
+        "format": " {usage}%"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": " {used:0.1f}GB",
+        "max-length": 10,
+    	"tooltip": true,
+    	"tooltip-format": "{used:0.1f} of {total:0.1f} GB"
+    },
+
+    "temperature": {
+        "thermal-zone": 6,
+        "format": " {temperatureC}°C",
+	    "tooltip": false
+    },
+
+    "network": {
+        "format": "  {essid}",
+        "tooltip-format": "{ipaddr} ({signalStrength}%)",
+        "max-length": 50
+    },
+
+    "custom/lock": {
+        "format": "",
+        "on-click": "swayidle -w timeout 1 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'",
+	    "tooltip": false
+    }
+}
