@@ -91,7 +91,7 @@
 
     "custom/lock": {
         "format": "",
-        "on-click": "swayidle -w timeout 1 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' &",
+        "on-click": "sleep 1 && hyprctl dispatch dpms off",
         "tooltip": false
     }
 }
