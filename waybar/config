@@ -10,11 +10,11 @@
     "margin-left": 0,
 
     "modules-left": [
-        "clock",
-        "wlr/taskbar"
+        "hyprland/workspaces"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "clock",
+        "wlr/taskbar"
     ],
     "modules-right": [
         "custom/playback",
@@ -24,6 +24,16 @@
         "network",
         "custom/lock"
     ],
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "disable-scroll": true,
+        "all-outputs": true,
+        "show-special": true,
+        "persistent-workspaces": {
+            "*": [ 1, 2, 3 ]
+        }
+    },
 
     "clock": {
         "timezone": "Europe/Oslo",
@@ -39,16 +49,6 @@
         "tooltip-format": "{name}: {title}",
         "on-click": "activate",
         "on-click-middle": "close"
-    },
-
-    "hyprland/workspaces": {
-        "on-click": "activate",
-        "disable-scroll": true,
-        "all-outputs": true,
-        "show-special": true,
-        "persistent-workspaces": {
-            "*": [ 1, 2, 3 ]
-        }
     },
 
     "custom/playback": {
