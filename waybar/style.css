@@ -1,7 +1,6 @@
-@define-color background	#819a91;
-@define-color transparent   #eeeeee;
-@define-color foreground	#faf9ee;
-@define-color contrasted	#000000;
+@define-color green #819a91;
+@define-color white #eeeeee;
+@define-color text  #0f0f0f;
 
 * {
     border: none;
@@ -12,49 +11,58 @@
     min-height: 0;
 }
 
-window#waybar {
-    background: @transparent;
-    border: 2px solid @background;
+window#waybar,
+#taskbar {
+    background: transparent;
+    border: 2px solid @green;
 }
 
 #workspaces button,
-#workspaces button.persistent {
-    background: @transparent;
-    color: @contrasted;
+#workspaces button.persistent,
+#taskbar button {
+    background: transparent;
+    color: @text;
 }
 #workspaces button.active,
-#workspaces button:hover {
-    background: @background;
-    color: @foreground;
+#workspaces button:hover,
+#taskbar button:hover,
+#taskbar button.active {
+    background-color: @green;
+    color: @white;
     box-shadow: none;
+}
+#custom-lock:hover {
+    background: transparent;
 }
 
 tooltip {
-    background: @foreground;
+    background: @white;
     opacity: 0.8;
-    border: 2px solid @contrasted;
+    border: 2px solid @green;
 }
 tooltip label {
-    color: @contrasted;
+    color: @text;
     font-size: 12px;
     font-weight: normal;
 }
 
 #clock,
-#taskbar,
-#workspaces,
 #custom-playback,
 #cpu,
 #memory,
 #temperature,
 #network,
+#bluetooth,
 #custom-lock {
-    background: @background;
+    background: @green;
     padding: 2px 10px;
+    color: @text;
 }
-#taskbar,
 #workspaces {
-    padding: 2px;
+    border-right: 2px solid @green;
+}
+#network {
+    padding: 2px 16px 2px 10px;
 }
 #custom-lock {
     padding: 2px 14px 2px 10px;

@@ -21,6 +21,7 @@
         "cpu",
         "memory",
         "temperature",
+        "bluetooth",
         "network",
         "custom/lock"
     ],
@@ -48,7 +49,8 @@
         "all-outputs": true,
         "tooltip-format": "{name}: {title}",
         "on-click": "activate",
-        "on-click-middle": "close"
+        "on-click-middle": "close",
+        "ignore-list": ["kitty"],
     },
 
     "custom/playback": {
@@ -83,9 +85,19 @@
         "tooltip": false
     },
 
+    "bluetooth": {
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "",
+        "format-connected": "󰂱 {num_connections}",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\n  {device_address}"
+    },
+
     "network": {
-        "format": "  {essid}",
-        "tooltip-format": "{ipaddr} ({signalStrength}%)",
+        "format-wifi": "{icon}",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "tooltip-format": "{essid}\n{ipaddr}/{cidr}",
         "max-length": 50
     },
 
