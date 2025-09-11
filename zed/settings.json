@@ -38,20 +38,7 @@
   "buffer_font_size": 15,
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "el",
     "dark": "One Dark"
-  },
-  "experimental.theme_overrides": {
-    "editor.background": "#efedeb",
-    "panel.background": "#efedeb",
-    "terminal.background": "#efedeb",
-    "editor.gutter.background": "#efedeb",
-    "tab.inactive_background": "#efedeb",
-    "tab_bar.background": "#efedeb",
-    "editor.document_highlight.bracket_background": "#bdbebc",
-    "toolbar.background": "#f2f1ef",
-    "tab.active_background": "#f2f1ef",
-    "title_bar.background": "#f2f1ef",
-    "editor.active_line.background": "#f2f1ef"
   }
 }
