@@ -2,7 +2,7 @@
     font-size: 16px;
     font-family: "JetBrainsMono Nerd Font", "monospace";
     background: #eeeeee;
-    border: 2px solid #819a91;
+    border: 2px solid #088199;
 }
 
 #text {
@@ -16,7 +16,7 @@
     font-weight: 500;
     padding: 5px;
     box-shadow: none;
-    border: 2px solid #819a91;
+    border: 2px solid #088199;
     margin-bottom: -2px;
 }
 
@@ -28,7 +28,7 @@
 }
 #entry:selected {
     margin: 0px;
-    border: 2px solid #819a91;
+    border: 2px solid #088199;
 }
 
 #img {

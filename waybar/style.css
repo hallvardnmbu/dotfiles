@@ -1,4 +1,4 @@
-@define-color green #819a91;
+@define-color focus #088199;
 @define-color white #eeeeee;
 @define-color text  #0f0f0f;
 
@@ -14,7 +14,7 @@
 window#waybar,
 #taskbar {
     background: transparent;
-    border: 2px solid @green;
+    border: 2px solid @focus;
 }
 
 #workspaces button,
@@ -27,7 +27,7 @@ window#waybar,
 #workspaces button:hover,
 #taskbar button:hover,
 #taskbar button.active {
-    background-color: @green;
+    background-color: @focus;
     color: @white;
     box-shadow: none;
 }
@@ -38,7 +38,7 @@ window#waybar,
 tooltip {
     background: @white;
     opacity: 0.8;
-    border: 2px solid @green;
+    border: 2px solid @focus;
 }
 tooltip label {
     color: @text;
@@ -54,12 +54,12 @@ tooltip label {
 #network,
 #bluetooth,
 #custom-lock {
-    background: @green;
+    background: @focus;
     padding: 2px 10px;
     color: @text;
 }
 #workspaces {
-    border-right: 2px solid @green;
+    border-right: 2px solid @focus;
 }
 #network {
     padding: 2px 16px 2px 10px;
