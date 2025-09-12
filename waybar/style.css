@@ -27,7 +27,7 @@ window#waybar,
 #workspaces button:hover,
 #taskbar button:hover,
 #taskbar button.active {
-    background-color: @focus;
+    background: @focus;
     color: @white;
     box-shadow: none;
 }
