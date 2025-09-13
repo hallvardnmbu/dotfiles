@@ -97,8 +97,7 @@
     "network": {
         "format-wifi": "{icon}",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-        "tooltip-format": "{essid}\n{ipaddr}/{cidr}",
-        "max-length": 50
+        "tooltip-format": "{essid}\n  {ipaddr}/{cidr}\n↑ {bandwidthUpBytes}\n↓ {bandwidthDownBytes} "
     },
 
     "custom/lock": {
