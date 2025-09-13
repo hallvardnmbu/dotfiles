@@ -46,5 +46,17 @@
     "bindings": {
       "ctrl-4": "pane::SplitRight"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-<": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-backspace": null
+    }
   }
 ]
