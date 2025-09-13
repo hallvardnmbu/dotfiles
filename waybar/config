@@ -14,10 +14,11 @@
     ],
     "modules-center": [
         "clock",
+        "mpris",
+        "custom/playback",
         "wlr/taskbar"
     ],
     "modules-right": [
-        "custom/playback",
         "cpu",
         "memory",
         "temperature",
@@ -43,26 +44,39 @@
         "tooltip-format": " {:%Y-%m-%d}"
     },
 
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 24,
-        "all-outputs": true,
-        "tooltip-format": "{name}: {title}",
-        "on-click": "activate",
-        "on-click-middle": "close",
-        "ignore-list": ["kitty"],
+    "mpris": {
+        "format": "♫",
+        "format-paused": "𝄽 ",
+        "format-stopped": "𝄽 ",
+        "tooltip-format": "{title}\n{artist}",
+        "on-click": "playerctl play-pause",
+        "on-middle-click": "playerctl previous",
+        "on-click-right": "playerctl next",
+        "on-scroll-up": "playerctl volume 0.1+",
+        "on-scroll-down": "playerctl volume 0.1-",
+        "scroll-step": 5
     },
 
     "custom/playback": {
-        "format": "♪ {}%",
+        "format": "{}%",
         "exec": "playerctl volume | awk '{print int($1 * 100)}'",
         "exec-on-event": true,
         "interval": 10,
-        "on-click": "playerctl play-pause",
+        "on-click": "playerctl volume 0",
         "on-scroll-up": "playerctl volume 0.1+",
         "on-scroll-down": "playerctl volume 0.1-",
         "scroll-step": 5,
         "tooltip": false
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "all-outputs": true,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": ["kitty"],
     },
 
     "cpu": {
@@ -91,13 +105,13 @@
         "format-disabled": "",
         "format-connected": "󰂱 {num_connections}",
         "tooltip-format-connected": "{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\n  {device_address}"
+        "tooltip-format-enumerate-connected": "{device_alias}\n* {device_address}"
     },
 
     "network": {
         "format-wifi": "{icon}",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-        "tooltip-format": "{essid}\n  {ipaddr}/{cidr}\n↑ {bandwidthUpBytes}\n↓ {bandwidthDownBytes} "
+        "tooltip-format": "{essid}\n* {ipaddr}/{cidr}\n↑ {bandwidthUpBytes}\n↓ {bandwidthDownBytes} "
     },
 
     "custom/lock": {

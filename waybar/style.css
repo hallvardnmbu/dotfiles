@@ -37,7 +37,6 @@ window#waybar,
 
 tooltip {
     background: @white;
-    opacity: 0.8;
     border: 2px solid @focus;
 }
 tooltip label {
@@ -47,6 +46,7 @@ tooltip label {
 }
 
 #clock,
+#mpris,
 #custom-playback,
 #cpu,
 #memory,
@@ -66,4 +66,8 @@ tooltip label {
 }
 #custom-lock {
     padding: 2px 14px 2px 10px;
+}
+#mpris {
+    font-size: 24px;
+    padding: 2px 12px 2px 10px;
 }
