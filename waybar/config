@@ -39,9 +39,9 @@
 
     "clock": {
         "timezone": "Europe/Oslo",
-        "format": " {:%H:%M}",
+        "format": "{:%d.%m. %H:%M}",
         "tooltip": true,
-        "tooltip-format": " {:%Y-%m-%d}"
+	"tooltip-format": "{:%B %Y\nWeek %U}"
     },
 
     "mpris": {
