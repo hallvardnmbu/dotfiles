@@ -48,7 +48,12 @@
     }
   },
   {
-    "context": "Workspace",
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-backspace": null
+    }
+  },
+  {
     "bindings": {
       "ctrl-<": "workspace::NewTerminal"
     }
@@ -56,7 +61,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-backspace": null
+      "ctrl-w": "pane::CloseActiveItem"
     }
   }
 ]
