@@ -20,6 +20,7 @@
     ],
     "modules-right": [
         "cpu",
+        "custom/gpu",
         "memory",
         "temperature",
         "bluetooth",
@@ -83,6 +84,15 @@
         "interval": 10,
         "max-length": 10,
         "format": " {usage}%"
+    },
+
+    "custom/gpu": {
+        "interval": 10,
+        "max-length": 10,
+        "format": "❏ {text}%",
+        "exec": "$HOME/.config/waybar/gpu.sh",
+        "return-type": "json",
+        "tooltip": true
     },
 
     "memory": {
