@@ -103,15 +103,20 @@
     },
 
     "temperature": {
-        "thermal-zone": 6,
+        "thermal-zone": 1,
         "format": " {temperatureC}°C",
         "tooltip": false
     },
 
     "network": {
-        "format": "{icon}",
+        "format-wifi": "{icon}",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-        "tooltip-format": "{essid}\n* {ipaddr}/{cidr}\n↑ {bandwidthUpBytes}\n↓ {bandwidthDownBytes} "
+        "format-ethernet": "",
+        "format-linked": " ",
+        "format-disconnected": "󰤮",
+        "tooltip-format": "{ipaddr}/{cidr}\n* {signalStrength} %\n↑ {bandwidthUpBytes}\n↓ {bandwidthDownBytes}",
+        "on-click": "nm-connection-editor",
+        "on-click-right": "kitty nmtui"
     },
 
     "custom/lock": {
