@@ -1,8 +1,9 @@
 #window {
     font-size: 16px;
     font-family: "JetBrainsMono Nerd Font", "monospace";
-    background: #eeeeee;
+    background-color: rgba(200, 200, 200, 0.2);
     border: 2px solid #088199;
+    border-radius: 4px;
 }
 
 #text {
@@ -10,33 +11,24 @@
 }
 
 #input {
-    background: rgba(200, 200, 200, 0.3);
-    border-radius: 0px;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 5px;
+    background: unset;
     box-shadow: none;
-    border: 2px solid #088199;
+    border: unset;
+    border-radius: 0px;
+    border-bottom: 2px solid #088199;
+    font-size: 20px;
+    padding: 5px 0 5px 10px;
     margin-bottom: -2px;
-}
-
-#entry {
-    padding: 5px;
-    margin: 2px; /* Replaced by border on select. */
-    background: transparent;
-    color: #000000;
-}
-#entry:selected {
-    margin: 0px;
-    border: 2px solid #088199;
 }
 
 #img {
     padding-right: 5px;
 }
-
-#expander-box {
+#entry {
+    padding: 5px;
+    color: #000000;
+}
+#entry:selected {
     background: transparent;
-    padding-left: 30px;
-    font-size: 14px;
+    outline: 2px solid #088199;
 }
