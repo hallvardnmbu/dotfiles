@@ -3,8 +3,7 @@
 DIRECTORY="$HOME/.config/wallpapers"
 
 # Time to wait between changes (in seconds)
-# 30m = 1800s
-SLEEP=1800
+SLEEP=3600
 
 while true; do
     FILE=$(find "$DIRECTORY" -type f -name "*.jpg" | shuf -n 1)

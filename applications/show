@@ -6,3 +6,5 @@ org.prismlauncher.PrismLauncher
 org.pulseaudio.pavucontrol
 steam
 tor-browser
+com.prusa3d.PrusaSlicer
+com.spotify.Client
