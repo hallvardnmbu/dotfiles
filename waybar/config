@@ -10,6 +10,7 @@
     "margin-left": 0,
 
     "modules-left": [
+        "custom/wallpaper",
         "hyprland/workspaces"
     ],
     "modules-center": [
@@ -27,6 +28,12 @@
         "custom/lock"
     ],
 
+    "custom/wallpaper": {
+        "format": "◪",
+        "tooltip-format": "Rotate wallpaper.",
+        "on-click": "$HOME/.config/waybar/wallpaper.sh"
+    },
+
     "hyprland/workspaces": {
         "on-click": "activate",
         "disable-scroll": true,
@@ -41,7 +48,7 @@
         "timezone": "Europe/Oslo",
         "format": "{:%d.%m. %H:%M}",
         "tooltip": true,
-	"tooltip-format": "{:%B %Y\nWeek %U}"
+	    "tooltip-format": "{:%B %Y\nWeek %U}"
     },
 
     "mpris": {
