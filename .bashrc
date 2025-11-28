@@ -11,6 +11,7 @@ alias c='git commit -m'
 alias p='git push'
 alias pl='git pull'
 
+export XDG_CONFIG_HOME="$HOME/.config"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$HOME/.local/bin:/home/acme/Code/docker/target/release/:$PATH"
 
