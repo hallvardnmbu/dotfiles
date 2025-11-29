@@ -17,7 +17,6 @@
     ],
     "modules-center": [
         "clock",
-        "mpris",
         "custom/playback",
         "wlr/taskbar"
     ],
@@ -58,29 +57,19 @@
 	    "tooltip-format": "{:%B %Y\nWeek %U}"
     },
 
-    "mpris": {
-        "format": "♫",
-        "format-paused": "𝄽 ",
-        "format-stopped": "𝄽 ",
-        "tooltip-format": "{title}\n{artist}",
-        "on-click": "playerctl play-pause",
+    "custom/playback": {
+        "format": "{text}",
+        "exec": "$HOME/.config/waybar/playback/status.sh",
+        "exec-on-event": true,
+        "interval": 10,
+        "return-type": "json",
+        "on-click": "$HOME/.config/waybar/playback/click.sh",
         "on-middle-click": "playerctl previous",
         "on-click-right": "playerctl next",
         "on-scroll-up": "playerctl volume 0.1+",
         "on-scroll-down": "playerctl volume 0.1-",
-        "scroll-step": 5
-    },
-
-    "custom/playback": {
-        "format": "{}%",
-        "exec": "playerctl volume | awk '{print int($1 * 100)}'",
-        "exec-on-event": true,
-        "interval": 10,
-        "on-click": "playerctl volume 0",
-        "on-scroll-up": "playerctl volume 0.1+",
-        "on-scroll-down": "playerctl volume 0.1-",
         "scroll-step": 5,
-        "tooltip": false
+        "tooltip": true
     },
 
     "wlr/taskbar": {

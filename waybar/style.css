@@ -12,7 +12,6 @@
 }
 
 window#waybar {
-    color: @text;
     background: transparent;
 }
 
@@ -40,17 +39,16 @@ tooltip label {
 }
 
 #custom-wallpaper:hover,
-#mpris:hover,
 #custom-playback:hover,
 #network:hover,
 #custom-lock:hover {
+    color: @focus;
     background: transparent;
 }
 
 tooltip {
     background: @focus;
     border-radius: 4px;
-    border: 2px solid red;
 }
 tooltip label {
     font-size: 14px;
@@ -59,7 +57,6 @@ tooltip label {
 
 #custom-wallpaper,
 #clock,
-#mpris,
 #custom-playback,
 #cpu,
 #custom-gpu,
@@ -69,8 +66,12 @@ tooltip label {
 #custom-lock {
     background: @focus;
     padding: 0px 8px;
-    color: @text;
+    color: @white;
     border: 2px solid @focus;
+}
+
+#custom-playback {
+    font-size: 16px;
 }
 
 #custom-wallpaper,
@@ -85,7 +86,7 @@ tooltip label {
 #custom-lock {
     padding: 0px 14px 0px 10px;
 }
-#mpris {
+#custom-playback {
     font-size: 22px;
     padding: 0px 12px 0px 10px;
 }
