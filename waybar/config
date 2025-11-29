@@ -5,9 +5,11 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
+    "reload_style_on_change": true,
     "height": 36,
-    "margin-right": 0,
-    "margin-left": 0,
+    "margin-right": 8,
+    "margin-left": 8,
+    "margin-top": 8,
 
     "modules-left": [
         "custom/wallpaper",
@@ -35,6 +37,11 @@
     },
 
     "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "○",
+            "default": "●",
+        },
         "on-click": "activate",
         "disable-scroll": true,
         "all-outputs": true,
@@ -116,11 +123,7 @@
     },
 
     "network": {
-        "format-wifi": "{icon}",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-        "format-ethernet": "",
-        "format-linked": " ",
-        "format-disconnected": "󰤮",
+        "format": " ",
         "tooltip-format": "{ipaddr}/{cidr}\n* {signalStrength} %\n↑ {bandwidthUpBytes}\n↓ {bandwidthDownBytes}",
         "on-click": "nm-connection-editor",
         "on-click-right": "kitty nmtui"
