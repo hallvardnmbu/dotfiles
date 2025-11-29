@@ -71,12 +71,9 @@ tooltip label {
     border: 2px solid @focus;
 }
 
-#custom-playback {
-    font-size: 16px;
-}
-
 #custom-wallpaper,
-#custom-playback {
+#custom-playback,
+#temperature {
     margin-right: 8px;
 }
 
@@ -84,12 +81,15 @@ tooltip label {
 #custom-wallpaper {
     padding: 0px 10px;
 }
-#custom-lock {
-    padding: 0px 14px 0px 10px;
+#clock {
+    padding: 0px 2px 0px 8px;
 }
 #custom-playback {
     font-size: 22px;
     padding: 0px 12px 0px 10px;
+}
+#custom-lock {
+    padding: 0px 14px 0px 10px;
 }
 
 /* Radii */
@@ -98,12 +98,14 @@ tooltip label {
     border-radius: 4px;
 }
 #clock,
-#cpu {
+#cpu,
+#network {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
 #custom-playback,
 #taskbar,
+#temperature,
 #custom-lock {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
