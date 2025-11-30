@@ -593,7 +593,7 @@
         "search.match_background": "#ffffff30",
         "panel.focused_border": "#ffffff00",
         "pane.focused_border": "#ffffff00",
-        "elevated_surface.background": "#ffffff00",
+        "elevated_surface.background": "#ffffff",
         "editor.wrap_guide": "#ffffff00",
         "editor.subheader.background": "#ffffff00",
         "editor.line_number": "#0f0f0f",
